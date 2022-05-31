@@ -3,3 +3,8 @@ body {
   color: #fdf6e3;
   background-color: #002b36;
 }
+
+.content {
+  max-width: 720px;
+  margin: auto;
+}
