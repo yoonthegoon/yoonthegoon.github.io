@@ -8,3 +8,19 @@ body {
   max-width: 720px;
   margin: auto;
 }
+
+.center {
+  text-align: center;
+}
+
+a:link {
+  color: #268bd2;
+}
+
+a:visited {
+  color: #6c71c4;
+}
+
+a:active {
+  color: #dc322f;
+}
