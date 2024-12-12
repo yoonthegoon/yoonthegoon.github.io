@@ -1,3 +1,5 @@
+import typography from "@tailwindcss/typography";
+import forms from "@tailwindcss/forms";
 import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
@@ -7,7 +9,7 @@ export default {
     extend: {},
   },
   daisyui: {
-    themes: [],
+    // themes: [],
   },
-  plugins: [daisyui],
+  plugins: [typography, forms, daisyui],
 };
