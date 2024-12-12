@@ -1,5 +1,7 @@
 import Markdown from "react-markdown";
-import githubMark from "./assets/github-mark.svg";
+import githubMarkDark from "./assets/github-mark.svg";
+import githubMarkWhite from "./assets/github-mark-white.svg";
+import { useEffect, useState } from "react";
 
 const markdown = `
 ## Hi there 👋
@@ -39,6 +41,18 @@ If you don't have discord but would still like to reach me, just fill out my [co
 `;
 
 export default function App() {
+  const [theme, setTheme] = useState("light");
+  const githubMark = theme === "light" ? githubMarkDark : githubMarkWhite;
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = () => setTheme(mediaQuery.matches ? "dark" : "light");
+    handleChange();
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col">
       <nav className="navbar bg-base-300">
@@ -52,7 +66,7 @@ export default function App() {
             className="btn btn-square btn-ghost"
             href="https://github.com/yoonthegoon/yoonthegoon.github.io"
           >
-            {/* TODO: fill white on dark mode */}
+            {/* FIXME: Type {} is not assignable to type string | undefined */}
             <img src={githubMark} alt="Github Mark" width="24px" />
           </a>
         </div>
