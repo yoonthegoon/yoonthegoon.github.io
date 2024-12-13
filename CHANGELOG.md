@@ -10,5 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - This CHANGELOG
+- /about path
+- /contact path
+- /recaptcha path
 
 [unreleased]: https://github.com/yoonthegoon/yoonthegoon.github.io/compare/main..dev
