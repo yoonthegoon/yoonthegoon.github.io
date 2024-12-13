@@ -38,5 +38,9 @@ Feel free to [sponsor me ❤️](https://github.com/sponsors/yoonthegoon/)
 `;
 
 export default function Home() {
-  return <Markdown className="prose mx-auto">{markdown}</Markdown>;
+  return (
+    <main className="my-12 flex flex-grow">
+      <Markdown className="prose mx-auto">{markdown}</Markdown>
+    </main>
+  );
 }

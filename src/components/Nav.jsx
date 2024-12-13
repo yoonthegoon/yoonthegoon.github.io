@@ -28,7 +28,7 @@ export default function Nav() {
           href="https://github.com/yoonthegoon/yoonthegoon.github.io"
         >
           {/* FIXME: Type {} is not assignable to type string | undefined */}
-          <img src={githubMark} alt="Github Mark" width="24px" />
+          <img src={githubMark} alt="Github Mark" className="w-6" />
         </a>
       </div>
     </nav>
